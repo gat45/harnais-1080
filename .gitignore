@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.harness_memory/
+bm25_index.json
+*.log
+*.bak
+*.exe
+.hypothesis/

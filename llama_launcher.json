@@ -1,0 +1,66 @@
+{
+  "model_path": "F:\\archive_s3_release\\model\\q38_9b_s3_gutop.gguf",
+  "server_path": "E:\\lama-tensorRT 1050-5070\\llama-server.exe",
+  "host": "127.0.0.1",
+  "port": 8080,
+  "tuned": {
+    "F:\\DeepSeek-V4-Pro-Qwen3.5-9B-MTP-Q4_K_M.gguf": {
+      "settings": {
+        "Host": "127.0.0.1",
+        "Port": 8080,
+        "Ctx": 27648,
+        "Ngl": 999,
+        "Threads": 8,
+        "Batch": 1024,
+        "Ubatch": 512,
+        "KV": "q8_0",
+        "FA": "on",
+        "NKVO": false,
+        "OpenWeb": true,
+        "MTP": true,
+        "MTPN": 2
+      },
+      "tok_per_s": 43.582251262132644,
+      "vram_mb": 8192
+    },
+    "F:\\archive_s3_release\\model\\q38_9b_s3_gutop.gguf": {
+      "settings": {
+        "Host": "127.0.0.1",
+        "Port": 8080,
+        "Ctx": 2048,
+        "Ngl": 999,
+        "Threads": 12,
+        "Batch": 1024,
+        "Ubatch": 512,
+        "KV": "f16",
+        "FA": "on",
+        "NKVO": false,
+        "OpenWeb": true,
+        "MTP": false,
+        "MTPN": 0
+      },
+      "tok_per_s": 33.4,
+      "vram_mb": 8192,
+      "_note": "Recette AR (sans speculatif) de README_RELEASE.md section 2. Ctx=2048 au lieu du -c 80000 casse qui produisait la sortie '?'. MTP desactive ici : le binaire reellement lance (lama du 2708/llama-server.exe) n'a PAS draft-mtp dans son --spec-type (verifie --help le 2026-10-17) -- seul le fork llama-cpp-turboquant (geniex_harness/npu-rtx) le supporte, binaire different de celui utilise ce soir."
+    },
+    "F:\\tiers\\Nanbeige4.2-3B-Q8_0.gguf": {
+      "settings": {
+        "Host": "127.0.0.1",
+        "Port": 8080,
+        "Ctx": 69632,
+        "Ngl": 999,
+        "Threads": 8,
+        "Batch": 1024,
+        "Ubatch": 1024,
+        "KV": "q8_0",
+        "FA": "on",
+        "NKVO": false,
+        "OpenWeb": true,
+        "MTP": false,
+        "MTPN": 0
+      },
+      "tok_per_s": 8.445525756885097,
+      "vram_mb": 8192
+    }
+  }
+}
